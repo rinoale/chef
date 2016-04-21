@@ -12,13 +12,39 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "bento/centos-6.7"
-  config.vm.hostname = "dev"
-  config.vm.network "forwarded_port", guest: 80, host: 8888
-  config.vm.network "private_network", ip: "192.168.33.10"
-  config.vm.provider "virtualbox" do |vb|
-    vb.name = "dev"
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+
+  config.vm.define :chef do |chef|
+    chef.vm.box = "bento/centos-6.7"
+    chef.vm.hostname = "chef"
+    chef.vm.network "forwarded_port", guest: 80, host: 8000
+    chef.vm.network "forwarded_port", id: "ssh", guest: 22, host: 2000
+    chef.vm.network "private_network", ip: "192.168.33.11"
+    chef.vm.provider "virtualbox" do |vb|
+      vb.name = "chef"
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+  end
+  config.vm.define :dev do |dev|
+    dev.vm.box = "bento/centos-6.7"
+    dev.vm.hostname = "dev"
+    dev.vm.network "forwarded_port", guest: 80, host: 8001
+    dev.vm.network "forwarded_port", id: "ssh", guest: 22, host: 2001
+    dev.vm.network "private_network", ip: "192.168.33.12"
+    dev.vm.provider "virtualbox" do |vb|
+      vb.name = "dev"
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
+  end
+  config.vm.define :test do |test|
+    test.vm.box = "bento/centos-6.7"
+    test.vm.hostname = "test"
+    test.vm.network "forwarded_port", guest: 80, host: 8002
+    test.vm.network "forwarded_port", id: "ssh", guest: 22, host: 2002
+    test.vm.network "private_network", ip: "192.168.33.13"
+    test.vm.provider "virtualbox" do |vb|
+      vb.name = "test"
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+    end
   end
 
   # Disable automatic box update checking. If you disable this, then
