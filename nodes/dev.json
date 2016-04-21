@@ -1,0 +1,15 @@
+{
+  "name": "dev",
+  "chef_environment": "development",
+  "automatic": {
+    "ipaddress": "dev"
+  },
+  "run_list": [
+    "recipe[yum-epel]",
+    "recipe[yum-update]",
+    "recipe[mariadb]",
+    "recipe[ruby-env]",
+    "recipe[vim]",
+    "recipe[lua]"
+  ]
+}
