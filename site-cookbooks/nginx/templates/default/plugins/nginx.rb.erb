@@ -1,0 +1,22 @@
+Ohai.plugin(:Nginx) do
+  provides "nginx"
+
+  def parse_flags
+    so = shell_out("<%= node['nginx']['sbin'] %> -V 2>&1")
+    so.stdout.lines.each do |line|
+      case line
+      when /^nginx version: nginx\/(\d+\.\d+\.\d+)/
+        @version = $1
+      when /^configure arguments:(.+)/
+        @configure_arguments = $1.split(/\s--/).drop(1).map { |ca| "--#{ca}" }
+      end
+    end
+  end
+
+  collect_data do
+    parse_flags
+    nginx Mash.new
+    nginx[:version]             = @version
+    nginx[:configure_arguments] = @configure_arguments
+  end
+end

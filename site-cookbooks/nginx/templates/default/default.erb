@@ -1,0 +1,5 @@
+server {
+  listen   <%= node['nginx']['port'] %> default_server;
+  server_name _;
+  deny all;
+}

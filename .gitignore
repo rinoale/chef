@@ -1,5 +1,10 @@
 /cookbooks/
 /.bundle/
+/.vagrant/
 /bin/
 /vendor/bundle/
+/clients/
 Gemfile.lock
+*.box
+*.bak
+Vagrantfile

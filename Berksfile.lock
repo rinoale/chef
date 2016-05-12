@@ -1,8 +1,10 @@
 DEPENDENCIES
+  ohai
   vim
   yum-epel
 
 GRAPH
+  ohai (3.0.1)
   vim (2.0.1)
   yum (3.10.0)
   yum-epel (0.6.6)
