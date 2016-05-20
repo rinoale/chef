@@ -1,5 +1,11 @@
 {
   "name": "test",
+  "chef_environment": "development",
+  "override": {
+    "vim": {
+      "install_method": "source"
+    }
+  },
   "normal": {
     "knife_zero": {
       "host": "test"
@@ -7,6 +13,208 @@
     "tags": [
 
     ]
+  },
+  "default": {
+    "yum": {
+      "main": {
+        "cachedir": "/var/cache/yum/$basearch/$releasever",
+        "distroverpkg": "centos-release",
+        "alwaysprompt": null,
+        "assumeyes": null,
+        "bandwidth": null,
+        "bugtracker_url": null,
+        "clean_requirements_on_remove": null,
+        "color": null,
+        "color_list_available_downgrade": null,
+        "color_list_available_install": null,
+        "color_list_available_reinstall": null,
+        "color_list_available_upgrade": null,
+        "color_list_installed_extra": null,
+        "color_list_installed_newer": null,
+        "color_list_installed_older": null,
+        "color_list_installed_reinstall": null,
+        "color_search_match": null,
+        "color_update_installed": null,
+        "color_update_local": null,
+        "color_update_remote": null,
+        "commands": null,
+        "deltarpm": null,
+        "debuglevel": null,
+        "diskspacecheck": null,
+        "enable_group_conditionals": null,
+        "errorlevel": null,
+        "exactarch": null,
+        "exclude": null,
+        "gpgcheck": true,
+        "group_package_types": null,
+        "groupremove_leaf_only": null,
+        "history_list_view": null,
+        "history_record": null,
+        "history_record_packages": null,
+        "http_caching": null,
+        "installonly_limit": null,
+        "installonlypkgs": null,
+        "installroot": null,
+        "keepalive": null,
+        "keepcache": false,
+        "kernelpkgnames": null,
+        "localpkg_gpgcheck": false,
+        "logfile": "/var/log/yum.log",
+        "max_retries": null,
+        "mdpolicy": null,
+        "metadata_expire": null,
+        "mirrorlist_expire": null,
+        "multilib_policy": null,
+        "obsoletes": null,
+        "overwrite_groups": null,
+        "password": null,
+        "path": "/etc/yum.conf",
+        "persistdir": null,
+        "pluginconfpath": null,
+        "pluginpath": null,
+        "plugins": null,
+        "protected_multilib": null,
+        "protected_packages": null,
+        "proxy": null,
+        "proxy_password": null,
+        "proxy_username": null,
+        "recent": null,
+        "releasever": null,
+        "repo_gpgcheck": null,
+        "reposdir": null,
+        "reset_nice": null,
+        "rpmverbosity": null,
+        "showdupesfromrepos": null,
+        "skip_broken": null,
+        "ssl_check_cert_permissions": null,
+        "sslcacert": null,
+        "sslclientcert": null,
+        "sslclientkey": null,
+        "sslverify": null,
+        "syslog_device": null,
+        "syslog_facility": null,
+        "syslog_ident": null,
+        "throttle": null,
+        "timeout": null,
+        "tolerant": false,
+        "tsflags": null,
+        "username": null
+      },
+      "epel-debuginfo": {
+        "repositoryid": "epel-debuginfo",
+        "description": "Extra Packages for Enterprise Linux 6 - $basearch - Debug",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=epel-debug-6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false,
+        "make_cache": true
+      },
+      "epel-source": {
+        "repositoryid": "epel-source",
+        "description": "Extra Packages for Enterprise Linux 6 - $basearch - Source",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=epel-source-6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false,
+        "make_cache": true
+      },
+      "epel-testing-debuginfo": {
+        "repositoryid": "epel-testing-debuginfo",
+        "description": "Extra Packages for Enterprise Linux 6 - Testing - $basearch Debug",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=testing-debug-epel6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false,
+        "make_cache": true
+      },
+      "epel-testing-source": {
+        "repositoryid": "epel-testing-source",
+        "description": "Extra Packages for Enterprise Linux 6 - Testing - $basearch Source",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=testing-source-epel6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false,
+        "make_cache": true
+      },
+      "epel-testing": {
+        "repositoryid": "epel-testing",
+        "description": "Extra Packages for Enterprise Linux 6 - Testing - $basearch",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=testing-epel6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": false,
+        "managed": false,
+        "make_cache": true
+      },
+      "epel": {
+        "repositoryid": "epel",
+        "description": "Extra Packages for Enterprise Linux 6 - $basearch",
+        "mirrorlist": "https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch",
+        "gpgkey": "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6",
+        "failovermethod": "priority",
+        "gpgcheck": true,
+        "enabled": true,
+        "managed": true,
+        "make_cache": true
+      }
+    },
+    "yum-epel": {
+      "repositories": [
+        "epel",
+        "epel-debuginfo",
+        "epel-source",
+        "epel-testing",
+        "epel-testing-debuginfo",
+        "epel-testing-source"
+      ]
+    },
+    "ruby-env": {
+      "user": "vagrant",
+      "group": "vagrant",
+      "version": "2.3.0",
+      "rbenv_url": "https://github.com/rbenv/rbenv.git",
+      "ruby-build_url": "https://github.com/rbenv/ruby-build.git"
+    },
+    "vim": {
+      "extra_packages": [
+
+      ],
+      "install_method": "package",
+      "source": {
+        "version": "7.4",
+        "checksum": "d0f5a6d2c439f02d97fa21bd9121f4c5abb1f6cd8b5a79d3ca82867495734ade",
+        "prefix": "/usr/local",
+        "configuration": "--without-x --enable-pythoninterp --enable-rubyinterp --enable-tclinterp --enable-luainterp --enable-perlinterp --enable-cscope  --with-features=huge --prefix=/usr/local",
+        "dependencies": [
+          "ctags",
+          "gcc",
+          "lua-devel",
+          "make",
+          "ncurses-devel",
+          "perl-devel",
+          "perl-ExtUtils-CBuilder",
+          "perl-ExtUtils-Embed",
+          "perl-ExtUtils-ParseXS",
+          "python-devel",
+          "ruby-devel",
+          "tcl-devel"
+        ]
+      }
+    },
+    "lua": {
+      "luajit_url": "http://luajit.org/git/luajit-2.0.git"
+    },
+    "user": "vagrant",
+    "group": "vagrant"
   },
   "automatic": {
     "languages": {
@@ -63,7 +271,7 @@
         },
         "ipv6": {
           "size": "335589",
-          "refcount": "26"
+          "refcount": "28"
         },
         "sg": {
           "size": "29318",
@@ -363,15 +571,15 @@
         "interfaces": {
           "lo": {
             "rx": {
-              "bytes": "109413",
-              "packets": "88",
+              "bytes": "467430",
+              "packets": "745",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
             },
             "tx": {
-              "bytes": "109413",
-              "packets": "88",
+              "bytes": "467430",
+              "packets": "745",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
@@ -381,16 +589,16 @@
           "eth0": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "632710",
-              "packets": "8988",
+              "bytes": "5288404",
+              "packets": "81590",
               "errors": "0",
               "drop": "0",
               "carrier": "0",
               "collisions": "0"
             },
             "rx": {
-              "bytes": "55311046",
-              "packets": "50350",
+              "bytes": "375503785",
+              "packets": "347920",
               "errors": "0",
               "drop": "0",
               "overrun": "0"
@@ -399,7 +607,7 @@
           "eth1": {
             "tx": {
               "queuelen": "1000",
-              "bytes": "1496",
+              "bytes": "1536",
               "packets": "20",
               "errors": "0",
               "drop": "0",
@@ -491,28 +699,28 @@
     },
     "memory": {
       "swap": {
-        "cached": "0kB",
+        "cached": "440kB",
         "total": "950268kB",
-        "free": "950268kB"
+        "free": "947948kB"
       },
       "total": "1020176kB",
-      "free": "520432kB",
-      "buffers": "23676kB",
-      "cached": "263784kB",
-      "active": "176896kB",
-      "inactive": "212492kB",
-      "dirty": "2024kB",
+      "free": "291884kB",
+      "buffers": "59176kB",
+      "cached": "333364kB",
+      "active": "319104kB",
+      "inactive": "276012kB",
+      "dirty": "84kB",
       "writeback": "0kB",
-      "anon_pages": "101928kB",
-      "mapped": "10180kB",
-      "slab": "92712kB",
-      "slab_reclaimable": "37492kB",
-      "slab_unreclaim": "55220kB",
-      "page_tables": "2692kB",
+      "anon_pages": "202236kB",
+      "mapped": "16872kB",
+      "slab": "114204kB",
+      "slab_reclaimable": "57656kB",
+      "slab_unreclaim": "56548kB",
+      "page_tables": "3580kB",
       "nfs_unstable": "0kB",
       "bounce": "0kB",
       "commit_limit": "1460356kB",
-      "committed_as": "231776kB",
+      "committed_as": "968632kB",
       "vmalloc_total": "34359738367kB",
       "vmalloc_used": "11736kB",
       "vmalloc_chunk": "34359708156kB"
@@ -545,14 +753,14 @@
     "filesystem": {
       "/dev/mapper/VolGroup-lv_root": {
         "kb_size": "39710104",
-        "kb_used": "1039508",
-        "kb_available": "36646764",
-        "percent_used": "3%",
+        "kb_used": "2515164",
+        "kb_available": "35171108",
+        "percent_used": "7%",
         "mount": "/",
         "total_inodes": "2531328",
-        "inodes_used": "44841",
-        "inodes_available": "2486487",
-        "inodes_percent_used": "2%",
+        "inodes_used": "91123",
+        "inodes_available": "2440205",
+        "inodes_percent_used": "4%",
         "fs_type": "ext4",
         "mount_options": [
           "rw"
@@ -577,13 +785,13 @@
       },
       "/dev/sda1": {
         "kb_size": "487652",
-        "kb_used": "29781",
-        "kb_available": "432271",
-        "percent_used": "7%",
+        "kb_used": "56747",
+        "kb_available": "405305",
+        "percent_used": "13%",
         "mount": "/boot",
         "total_inodes": "128016",
-        "inodes_used": "38",
-        "inodes_available": "127978",
+        "inodes_used": "44",
+        "inodes_available": "127972",
         "inodes_percent_used": "1%",
         "fs_type": "ext4",
         "mount_options": [
@@ -593,9 +801,9 @@
       },
       "vagrant": {
         "kb_size": "243924992",
-        "kb_used": "38529700",
-        "kb_available": "205395292",
-        "percent_used": "16%",
+        "kb_used": "40673596",
+        "kb_available": "203251396",
+        "percent_used": "17%",
         "mount": "/vagrant",
         "total_inodes": "1000",
         "inodes_used": "0",
@@ -674,138 +882,246 @@
         ]
       }
     },
-    "uptime_seconds": 81,
-    "uptime": "1 minutes 21 seconds",
-    "idletime_seconds": 56,
-    "idletime": "56 seconds",
+    "uptime_seconds": 1633,
+    "uptime": "27 minutes 13 seconds",
+    "idletime_seconds": 1128,
+    "idletime": "18 minutes 48 seconds",
     "packages": {
+      "openssl": {
+        "version": "1.0.1e",
+        "release": "42.el6_7.4"
+      },
       "setup": {
         "version": "2.8.14",
         "release": "20.el6_4.1"
+      },
+      "selinux-policy": {
+        "version": "3.7.19",
+        "release": "279.el6_7.9"
       },
       "basesystem": {
         "version": "10.0",
         "release": "4.el6"
       },
-      "tzdata": {
-        "version": "2015e",
-        "release": "1.el6"
+      "sqlite": {
+        "version": "3.6.20",
+        "release": "1.el6_7.2"
       },
-      "nss-softokn-freebl": {
-        "version": "3.14.3",
-        "release": "22.el6_6"
+      "nss": {
+        "version": "3.21.0",
+        "release": "0.3.el6_7"
+      },
+      "nss-tools": {
+        "version": "3.21.0",
+        "release": "0.3.el6_7"
       },
       "ncurses-libs": {
         "version": "5.7",
         "release": "4.20090207.el6"
       },
+      "procps": {
+        "version": "3.2.8",
+        "release": "35.el6_7"
+      },
       "libattr": {
         "version": "2.4.44",
         "release": "7.el6"
+      },
+      "udev": {
+        "version": "147",
+        "release": "2.63.el6_7.1"
       },
       "zlib": {
         "version": "1.2.3",
         "release": "29.el6"
       },
+      "device-mapper": {
+        "version": "1.02.95",
+        "release": "3.el6_7.4"
+      },
       "audit-libs": {
         "version": "2.3.7",
         "release": "5.el6"
+      },
+      "openssh": {
+        "version": "5.3p1",
+        "release": "114.el6_7"
       },
       "popt": {
         "version": "1.13",
         "release": "7.el6"
       },
+      "lvm2-libs": {
+        "version": "2.02.118",
+        "release": "3.el6_7.4"
+      },
       "libacl": {
         "version": "2.2.49",
         "release": "6.el6"
+      },
+      "cronie": {
+        "version": "1.4.4",
+        "release": "15.el6_7.1"
       },
       "bzip2-libs": {
         "version": "1.0.5",
         "release": "7.el6_0"
       },
+      "lvm2": {
+        "version": "2.02.118",
+        "release": "3.el6_7.4"
+      },
       "libselinux": {
         "version": "2.0.94",
         "release": "5.8.el6"
+      },
+      "openssh-server": {
+        "version": "5.3p1",
+        "release": "114.el6_7"
       },
       "sed": {
         "version": "4.2.1",
         "release": "10.el6"
       },
-      "nss-util": {
-        "version": "3.18.0",
-        "release": "1.el6_6"
+      "sudo": {
+        "version": "1.8.6p3",
+        "release": "20.el6_7"
+      },
+      "selinux-policy-targeted": {
+        "version": "3.7.19",
+        "release": "279.el6_7.9"
       },
       "readline": {
         "version": "6.0",
         "release": "4.el6"
       },
-      "gawk": {
-        "version": "3.1.7",
-        "release": "10.el6"
+      "grub": {
+        "version": "0.97",
+        "release": "94.el6_7.1"
+      },
+      "logrotate": {
+        "version": "3.7.8",
+        "release": "26.el6_7"
       },
       "file-libs": {
         "version": "5.04",
         "release": "21.el6"
       },
-      "libudev": {
-        "version": "147",
-        "release": "2.63.el6"
+      "db4-utils": {
+        "version": "4.7.25",
+        "release": "20.el6_7"
+      },
+      "libxml2": {
+        "version": "2.7.6",
+        "release": "20.el6_7.1"
       },
       "xz-libs": {
         "version": "4.999.9",
         "release": "0.5.beta.20091007git.el6"
       },
-      "sqlite": {
-        "version": "3.6.20",
+      "tzdata": {
+        "version": "2016d",
         "release": "1.el6"
       },
-      "grep": {
-        "version": "2.20",
-        "release": "3.el6"
+      "gpg-pubkey": {
+        "version": "c105b9de",
+        "release": "4e0fd3a3"
+      },
+      "MariaDB-common": {
+        "version": "10.1.14",
+        "release": "1.el6"
       },
       "cyrus-sasl-lib": {
         "version": "2.1.23",
         "release": "15.el6_6.2"
       },
+      "MariaDB-client": {
+        "version": "10.1.14",
+        "release": "1.el6"
+      },
       "libuuid": {
         "version": "2.17.2",
         "release": "12.18.el6"
+      },
+      "jemalloc": {
+        "version": "3.6.0",
+        "release": "1.el6"
       },
       "keyutils-libs": {
         "version": "1.4",
         "release": "5.el6"
       },
+      "galera": {
+        "version": "25.3.15",
+        "release": "1.rhel6.el6"
+      },
       "libgssglue": {
         "version": "0.1",
         "release": "11.el6"
+      },
+      "MariaDB-server": {
+        "version": "10.1.14",
+        "release": "1.el6"
       },
       "libgpg-error": {
         "version": "1.7",
         "release": "4.el6"
       },
-      "nss-softokn": {
-        "version": "3.14.3",
-        "release": "22.el6_6"
+      "libstdc++-devel": {
+        "version": "4.4.7",
+        "release": "16.el6"
+      },
+      "perl-Error": {
+        "version": "0.17015",
+        "release": "4.el6"
       },
       "checkpolicy": {
         "version": "2.0.22",
         "release": "1.el6"
       },
+      "perl-Git": {
+        "version": "1.7.1",
+        "release": "4.el6_7.1"
+      },
       "cpio": {
         "version": "2.10",
         "release": "12.el6_5"
       },
-      "libxml2": {
-        "version": "2.7.6",
-        "release": "20.el6"
+      "libcom_err-devel": {
+        "version": "1.41.12",
+        "release": "22.el6"
+      },
+      "libselinux-devel": {
+        "version": "2.0.94",
+        "release": "5.8.el6"
       },
       "gdbm": {
         "version": "1.8.0",
         "release": "38.el6"
       },
+      "krb5-devel": {
+        "version": "1.10.3",
+        "release": "42z1.el6_7"
+      },
+      "ncurses-devel": {
+        "version": "5.7",
+        "release": "4.20090207.el6"
+      },
+      "gpm-libs": {
+        "version": "1.20.6",
+        "release": "12.el6"
+      },
+      "vim-common": {
+        "version": "7.4.629",
+        "release": "5.el6"
+      },
       "libtasn1": {
         "version": "2.3",
         "release": "6.el6_5"
+      },
+      "lua-devel": {
+        "version": "5.1.4",
+        "release": "4.1.el6"
       },
       "p11-kit-trust": {
         "version": "0.18.5",
@@ -887,10 +1203,6 @@
         "version": "2.8.16",
         "release": "4.el6"
       },
-      "pam": {
-        "version": "1.1.1",
-        "release": "20.el6"
-      },
       "hwdata": {
         "version": "0.233",
         "release": "14.1.el6"
@@ -899,22 +1211,6 @@
         "version": "0.8.3",
         "release": "27.el6.centos.1"
       },
-      "rpcbind": {
-        "version": "0.2.0",
-        "release": "11.el6"
-      },
-      "nss": {
-        "version": "3.18.0",
-        "release": "5.3.el6_6"
-      },
-      "nss-tools": {
-        "version": "3.18.0",
-        "release": "5.3.el6_6"
-      },
-      "openssl": {
-        "version": "1.0.1e",
-        "release": "42.el6"
-      },
       "libcurl": {
         "version": "7.19.7",
         "release": "46.el6"
@@ -922,10 +1218,6 @@
       "curl": {
         "version": "7.19.7",
         "release": "46.el6"
-      },
-      "openldap": {
-        "version": "2.4.40",
-        "release": "5.el6"
       },
       "gpgme": {
         "version": "1.1.8",
@@ -1015,22 +1307,6 @@
         "version": "20071127",
         "release": "20.el6"
       },
-      "initscripts": {
-        "version": "9.03.49",
-        "release": "1.el6.centos"
-      },
-      "device-mapper-libs": {
-        "version": "1.02.95",
-        "release": "2.el6"
-      },
-      "device-mapper-event-libs": {
-        "version": "1.02.95",
-        "release": "2.el6"
-      },
-      "device-mapper-event": {
-        "version": "1.02.95",
-        "release": "2.el6"
-      },
       "kpartx": {
         "version": "0.4.9",
         "release": "87.el6"
@@ -1051,10 +1327,6 @@
         "version": "2.1.23",
         "release": "15.el6_6.2"
       },
-      "cronie-anacron": {
-        "version": "1.4.4",
-        "release": "15.el6"
-      },
       "crontabs": {
         "version": "1.10",
         "release": "33.el6"
@@ -1063,14 +1335,6 @@
         "version": "1.2.3",
         "release": "64.el6"
       },
-      "selinux-policy": {
-        "version": "3.7.19",
-        "release": "279.el6"
-      },
-      "kernel-firmware": {
-        "version": "2.6.32",
-        "release": "573.el6"
-      },
       "dhclient": {
         "version": "4.1.1",
         "release": "49.P1.el6.centos"
@@ -1078,14 +1342,6 @@
       "system-config-firewall-base": {
         "version": "1.2.27",
         "release": "7.2.el6_6"
-      },
-      "lvm2": {
-        "version": "2.02.118",
-        "release": "2.el6"
-      },
-      "openssh-server": {
-        "version": "5.3p1",
-        "release": "111.el6"
       },
       "authconfig": {
         "version": "6.1.12",
@@ -1143,6 +1399,34 @@
         "version": "12.10.24",
         "release": "1.el6"
       },
+      "chkconfig": {
+        "version": "1.3.49.3",
+        "release": "5.el6_7.2"
+      },
+      "nss-util": {
+        "version": "3.21.0",
+        "release": "0.3.el6_7"
+      },
+      "krb5-libs": {
+        "version": "1.10.3",
+        "release": "42z1.el6_7"
+      },
+      "nss-softokn-freebl": {
+        "version": "3.14.3",
+        "release": "23.el6_7"
+      },
+      "grep": {
+        "version": "2.20",
+        "release": "3.el6_7.1"
+      },
+      "coreutils": {
+        "version": "8.4",
+        "release": "37.el6_7.3"
+      },
+      "ca-certificates": {
+        "version": "2015.2.6",
+        "release": "65.0.1.el6_7"
+      },
       "libgcc": {
         "version": "4.4.7",
         "release": "16.el6"
@@ -1151,65 +1435,121 @@
         "version": "2.4.30",
         "release": "3.el6"
       },
+      "kernel-firmware": {
+        "version": "2.6.32",
+        "release": "573.26.1.el6"
+      },
       "ncurses-base": {
         "version": "5.7",
         "release": "4.20090207.el6"
       },
-      "bash": {
-        "version": "4.1.2",
-        "release": "33.el6"
+      "nss-softokn": {
+        "version": "3.14.3",
+        "release": "23.el6_7"
+      },
+      "nss-sysinit": {
+        "version": "3.21.0",
+        "release": "0.3.el6_7"
+      },
+      "openldap": {
+        "version": "2.4.40",
+        "release": "7.el6_7"
+      },
+      "initscripts": {
+        "version": "9.03.49",
+        "release": "1.el6.centos.5"
       },
       "libcap": {
         "version": "2.16",
         "release": "5.5.el6"
       },
+      "device-mapper-libs": {
+        "version": "1.02.95",
+        "release": "3.el6_7.4"
+      },
       "info": {
         "version": "4.13a",
         "release": "8.el6"
+      },
+      "device-mapper-event-libs": {
+        "version": "1.02.95",
+        "release": "3.el6_7.4"
       },
       "libcom_err": {
         "version": "1.41.12",
         "release": "22.el6"
       },
-      "db4": {
-        "version": "4.7.25",
-        "release": "19.el6_6"
+      "device-mapper-event": {
+        "version": "1.02.95",
+        "release": "3.el6_7.4"
       },
-      "nspr": {
-        "version": "4.10.8",
-        "release": "1.el6_6"
+      "postfix": {
+        "version": "2.6.6",
+        "release": "6.el6_7.1"
+      },
+      "cronie-anacron": {
+        "version": "1.4.4",
+        "release": "15.el6_7.1"
       },
       "libsepol": {
         "version": "2.0.41",
         "release": "4.el6"
       },
-      "chkconfig": {
-        "version": "1.3.49.3",
-        "release": "5.el6"
+      "openssh-clients": {
+        "version": "5.3p1",
+        "release": "114.el6_7"
+      },
+      "kernel": {
+        "version": "2.6.32",
+        "release": "573.el6"
       },
       "shadow-utils": {
         "version": "4.1.4.2",
         "release": "19.el6_6.1"
       },
+      "libuser": {
+        "version": "0.56.13",
+        "release": "8.el6_7"
+      },
       "libstdc++": {
         "version": "4.4.7",
         "release": "16.el6"
+      },
+      "libssh2": {
+        "version": "1.4.2",
+        "release": "2.el6_7.1"
       },
       "gmp": {
         "version": "4.3.1",
         "release": "7.el6_2.2"
       },
+      "kexec-tools": {
+        "version": "2.0.0",
+        "release": "286.el6_7.2"
+      },
       "elfutils-libelf": {
         "version": "0.161",
         "release": "3.el6"
+      },
+      "rpcbind": {
+        "version": "0.2.0",
+        "release": "11.el6_7"
       },
       "tcp_wrappers-libs": {
         "version": "7.6",
         "release": "57.el6"
       },
+      "kernel-devel": {
+        "version": "2.6.32",
+        "release": "573.el6"
+      },
       "dbus-libs": {
         "version": "1.2.24",
         "release": "8.el6_6"
+      },
+      "kernel-headers": {
+        "version": "2.6.32",
+        "release": "573.26.1.el6"
       },
       "lua": {
         "version": "5.1.4",
@@ -1219,49 +1559,105 @@
         "version": "7.8",
         "release": "7.el6"
       },
+      "libaio": {
+        "version": "0.3.107",
+        "release": "10.el6"
+      },
       "findutils": {
         "version": "4.4.2",
         "release": "6.el6"
+      },
+      "MariaDB-compat": {
+        "version": "10.1.14",
+        "release": "1.el6"
       },
       "libidn": {
         "version": "1.18",
         "release": "2.el6"
       },
+      "rsync": {
+        "version": "3.0.6",
+        "release": "12.el6"
+      },
       "libblkid": {
         "version": "2.17.2",
         "release": "12.18.el6"
       },
-      "krb5-libs": {
-        "version": "1.10.3",
-        "release": "42.el6"
+      "perl-DBI": {
+        "version": "1.609",
+        "release": "4.el6"
+      },
+      "lsof": {
+        "version": "4.82",
+        "release": "5.el6"
       },
       "expat": {
         "version": "2.0.1",
         "release": "11.el6_2"
       },
+      "MariaDB-devel": {
+        "version": "10.1.14",
+        "release": "1.el6"
+      },
       "libtirpc": {
         "version": "0.2.1",
         "release": "10.el6"
+      },
+      "gcc-c++": {
+        "version": "4.4.7",
+        "release": "16.el6"
       },
       "libselinux-utils": {
         "version": "2.0.94",
         "release": "5.8.el6"
       },
+      "git": {
+        "version": "1.7.1",
+        "release": "4.el6_7.1"
+      },
       "bzip2": {
         "version": "1.0.5",
         "release": "7.el6_0"
+      },
+      "zlib-devel": {
+        "version": "1.2.3",
+        "release": "29.el6"
       },
       "binutils": {
         "version": "2.20.51.0.2",
         "release": "5.43.el6"
       },
+      "libsepol-devel": {
+        "version": "2.0.41",
+        "release": "4.el6"
+      },
       "sysvinit-tools": {
         "version": "2.87",
         "release": "6.dsf.el6"
       },
+      "keyutils-libs-devel": {
+        "version": "1.4",
+        "release": "5.el6"
+      },
+      "openssl-devel": {
+        "version": "1.0.1e",
+        "release": "42.el6_7.4"
+      },
+      "readline-devel": {
+        "version": "6.0",
+        "release": "4.el6"
+      },
+      "vim-filesystem": {
+        "version": "7.4.629",
+        "release": "5.el6"
+      },
       "pth": {
         "version": "2.0.7",
         "release": "9.3.el6"
+      },
+      "vim-enhanced": {
+        "version": "7.4.629",
+        "release": "5.el6"
       },
       "p11-kit": {
         "version": "0.18.5",
@@ -1299,17 +1695,9 @@
         "version": "0.7.6",
         "release": "8.el6"
       },
-      "procps": {
-        "version": "3.2.8",
-        "release": "33.el6"
-      },
       "psmisc": {
         "version": "22.6",
         "release": "19.el6_5"
-      },
-      "db4-utils": {
-        "version": "4.7.25",
-        "release": "19.el6_6"
       },
       "e2fsprogs-libs": {
         "version": "1.41.12",
@@ -1331,17 +1719,9 @@
         "version": "1.18.1.4",
         "release": "21.el6"
       },
-      "coreutils-libs": {
-        "version": "8.4",
-        "release": "37.el6"
-      },
       "cracklib": {
         "version": "2.8.16",
         "release": "4.el6"
-      },
-      "coreutils": {
-        "version": "8.4",
-        "release": "37.el6"
       },
       "module-init-tools": {
         "version": "3.9",
@@ -1355,22 +1735,6 @@
         "version": "0.13.3",
         "release": "0.1.el6"
       },
-      "logrotate": {
-        "version": "3.7.8",
-        "release": "23.el6"
-      },
-      "nss-sysinit": {
-        "version": "3.18.0",
-        "release": "5.3.el6_6"
-      },
-      "ca-certificates": {
-        "version": "2015.2.4",
-        "release": "65.0.1.el6_6"
-      },
-      "libssh2": {
-        "version": "1.4.2",
-        "release": "1.el6_6.1"
-      },
       "rpm-libs": {
         "version": "4.8.0",
         "release": "47.el6"
@@ -1382,10 +1746,6 @@
       "gnupg2": {
         "version": "2.0.14",
         "release": "8.el6"
-      },
-      "mysql-libs": {
-        "version": "5.1.73",
-        "release": "5.el6_6"
       },
       "fipscheck": {
         "version": "1.2.0",
@@ -1443,10 +1803,6 @@
         "version": "0.70",
         "release": "6.el6"
       },
-      "libuser": {
-        "version": "0.56.13",
-        "release": "5.el6"
-      },
       "yum-metadata-parser": {
         "version": "1.1.2",
         "release": "16.el6"
@@ -1471,22 +1827,6 @@
         "version": "2.17.2",
         "release": "12.18.el6"
       },
-      "udev": {
-        "version": "147",
-        "release": "2.63.el6"
-      },
-      "device-mapper": {
-        "version": "1.02.95",
-        "release": "2.el6"
-      },
-      "openssh": {
-        "version": "5.3p1",
-        "release": "111.el6"
-      },
-      "lvm2-libs": {
-        "version": "2.02.118",
-        "release": "2.el6"
-      },
       "mdadm": {
         "version": "3.3.2",
         "release": "5.el6"
@@ -1503,14 +1843,6 @@
         "version": "5.8.10",
         "release": "10.el6_6"
       },
-      "postfix": {
-        "version": "2.6.6",
-        "release": "6.el6_5"
-      },
-      "cronie": {
-        "version": "1.4.4",
-        "release": "15.el6"
-      },
       "nfs-utils-lib": {
         "version": "1.1.5",
         "release": "11.el6"
@@ -1523,33 +1855,9 @@
         "version": "4.1.1",
         "release": "49.P1.el6.centos"
       },
-      "kernel": {
-        "version": "2.6.32",
-        "release": "573.el6"
-      },
-      "selinux-policy-targeted": {
-        "version": "3.7.19",
-        "release": "279.el6"
-      },
-      "kexec-tools": {
-        "version": "2.0.0",
-        "release": "286.el6"
-      },
-      "openssh-clients": {
-        "version": "5.3p1",
-        "release": "111.el6"
-      },
       "passwd": {
         "version": "0.77",
         "release": "4.el6_2.2"
-      },
-      "grub": {
-        "version": "0.97",
-        "release": "94.el6"
-      },
-      "sudo": {
-        "version": "1.8.6p3",
-        "release": "19.el6"
       },
       "audit": {
         "version": "2.3.7",
@@ -1558,10 +1866,6 @@
       "attr": {
         "version": "2.4.44",
         "release": "7.el6"
-      },
-      "gpg-pubkey": {
-        "version": "c105b9de",
-        "release": "4e0fd3a3"
       },
       "glibc": {
         "version": "2.12",
@@ -1579,17 +1883,37 @@
         "version": "3.13",
         "release": "141.el6_7.1"
       },
-      "kernel-headers": {
-        "version": "2.6.32",
-        "release": "573.22.1.el6"
-      },
       "glibc-devel": {
         "version": "2.12",
         "release": "1.166.el6_7.7"
       },
-      "kernel-devel": {
-        "version": "2.6.32",
-        "release": "573.el6"
+      "bash": {
+        "version": "4.1.2",
+        "release": "33.el6_7.1"
+      },
+      "nspr": {
+        "version": "4.11.0",
+        "release": "0.1.el6_7"
+      },
+      "libudev": {
+        "version": "147",
+        "release": "2.63.el6_7.1"
+      },
+      "db4": {
+        "version": "4.7.25",
+        "release": "20.el6_7"
+      },
+      "gawk": {
+        "version": "3.1.7",
+        "release": "10.el6_7.3"
+      },
+      "coreutils-libs": {
+        "version": "8.4",
+        "release": "37.el6_7.3"
+      },
+      "pam": {
+        "version": "1.1.1",
+        "release": "20.el6_7.1"
       }
     },
     "virtualbox": {
@@ -1603,7 +1927,7 @@
         "guest_additions_revision": "105871"
       }
     },
-    "ohai_time": 1463646407.4594898,
+    "ohai_time": 1463723159.633667,
     "etc": {
       "passwd": {
         "root": {
@@ -1773,6 +2097,13 @@
           "uid": 498,
           "shell": "/bin/false",
           "gecos": ""
+        },
+        "mysql": {
+          "dir": "/var/lib/mysql",
+          "gid": 498,
+          "uid": 497,
+          "shell": "/sbin/nologin",
+          "gecos": "MySQL server"
         }
       },
       "group": {
@@ -2014,6 +2345,12 @@
           "members": [
 
           ]
+        },
+        "mysql": {
+          "gid": 498,
+          "members": [
+
+          ]
         }
       }
     },
@@ -2037,13 +2374,13 @@
       "by_device": {
         "/dev/mapper/VolGroup-lv_root": {
           "kb_size": "39710104",
-          "kb_used": "1039508",
-          "kb_available": "36646764",
-          "percent_used": "3%",
+          "kb_used": "2515164",
+          "kb_available": "35171108",
+          "percent_used": "7%",
           "total_inodes": "2531328",
-          "inodes_used": "44841",
-          "inodes_available": "2486487",
-          "inodes_percent_used": "2%",
+          "inodes_used": "91123",
+          "inodes_available": "2440205",
+          "inodes_percent_used": "4%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
@@ -2073,12 +2410,12 @@
         },
         "/dev/sda1": {
           "kb_size": "487652",
-          "kb_used": "29781",
-          "kb_available": "432271",
-          "percent_used": "7%",
+          "kb_used": "56747",
+          "kb_available": "405305",
+          "percent_used": "13%",
           "total_inodes": "128016",
-          "inodes_used": "38",
-          "inodes_available": "127978",
+          "inodes_used": "44",
+          "inodes_available": "127972",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2091,9 +2428,9 @@
         },
         "vagrant": {
           "kb_size": "243924992",
-          "kb_used": "38529700",
-          "kb_available": "205395292",
-          "percent_used": "16%",
+          "kb_used": "40673448",
+          "kb_available": "203251544",
+          "percent_used": "17%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -2196,13 +2533,13 @@
       "by_mountpoint": {
         "/": {
           "kb_size": "39710104",
-          "kb_used": "1039508",
-          "kb_available": "36646764",
-          "percent_used": "3%",
+          "kb_used": "2515164",
+          "kb_available": "35171108",
+          "percent_used": "7%",
           "total_inodes": "2531328",
-          "inodes_used": "44841",
-          "inodes_available": "2486487",
-          "inodes_percent_used": "2%",
+          "inodes_used": "91123",
+          "inodes_available": "2440205",
+          "inodes_percent_used": "4%",
           "fs_type": "rootfs",
           "mount_options": [
             "rw"
@@ -2233,12 +2570,12 @@
         },
         "/boot": {
           "kb_size": "487652",
-          "kb_used": "29781",
-          "kb_available": "432271",
-          "percent_used": "7%",
+          "kb_used": "56747",
+          "kb_available": "405305",
+          "percent_used": "13%",
           "total_inodes": "128016",
-          "inodes_used": "38",
-          "inodes_available": "127978",
+          "inodes_used": "44",
+          "inodes_available": "127972",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2251,9 +2588,9 @@
         },
         "/vagrant": {
           "kb_size": "243924992",
-          "kb_used": "38529700",
-          "kb_available": "205395292",
-          "percent_used": "16%",
+          "kb_used": "40673448",
+          "kb_available": "203251544",
+          "percent_used": "17%",
           "total_inodes": "1000",
           "inodes_used": "0",
           "inodes_available": "1000",
@@ -2345,14 +2682,14 @@
         "/dev/mapper/VolGroup-lv_root,/": {
           "device": "/dev/mapper/VolGroup-lv_root",
           "kb_size": "39710104",
-          "kb_used": "1039508",
-          "kb_available": "36646764",
-          "percent_used": "3%",
+          "kb_used": "2515164",
+          "kb_available": "35171108",
+          "percent_used": "7%",
           "mount": "/",
           "total_inodes": "2531328",
-          "inodes_used": "44841",
-          "inodes_available": "2486487",
-          "inodes_percent_used": "2%",
+          "inodes_used": "91123",
+          "inodes_available": "2440205",
+          "inodes_percent_used": "4%",
           "fs_type": "ext4",
           "mount_options": [
             "rw"
@@ -2379,13 +2716,13 @@
         "/dev/sda1,/boot": {
           "device": "/dev/sda1",
           "kb_size": "487652",
-          "kb_used": "29781",
-          "kb_available": "432271",
-          "percent_used": "7%",
+          "kb_used": "56747",
+          "kb_available": "405305",
+          "percent_used": "13%",
           "mount": "/boot",
           "total_inodes": "128016",
-          "inodes_used": "38",
-          "inodes_available": "127978",
+          "inodes_used": "44",
+          "inodes_available": "127972",
           "inodes_percent_used": "1%",
           "fs_type": "ext4",
           "mount_options": [
@@ -2396,9 +2733,9 @@
         "vagrant,/vagrant": {
           "device": "vagrant",
           "kb_size": "243924992",
-          "kb_used": "38529700",
-          "kb_available": "205395292",
-          "percent_used": "16%",
+          "kb_used": "40673448",
+          "kb_available": "203251544",
+          "percent_used": "17%",
           "mount": "/vagrant",
           "total_inodes": "1000",
           "inodes_used": "0",
@@ -2644,16 +2981,69 @@
     },
     "root_group": "root",
     "recipes": [
-
+      "yum-epel",
+      "yum-epel::default",
+      "yum-update",
+      "yum-update::default",
+      "mariadb",
+      "mariadb::default",
+      "ruby-env",
+      "ruby-env::default",
+      "vim",
+      "vim::default",
+      "lua",
+      "lua::default",
+      "vim-plugin",
+      "vim-plugin::default",
+      "vim::source",
+      "vim::source_rhel"
     ],
     "expanded_run_list": [
-
+      "yum-epel::default",
+      "yum-update::default",
+      "mariadb::default",
+      "ruby-env::default",
+      "vim::default",
+      "lua::default",
+      "vim-plugin::default"
     ],
     "roles": [
 
-    ]
+    ],
+    "cookbooks": {
+      "yum-epel": {
+        "version": "0.6.6"
+      },
+      "yum-update": {
+        "version": "0.1.0"
+      },
+      "mariadb": {
+        "version": "0.1.0"
+      },
+      "ruby-env": {
+        "version": "0.1.0"
+      },
+      "vim": {
+        "version": "2.0.1"
+      },
+      "lua": {
+        "version": "0.1.0"
+      },
+      "vim-plugin": {
+        "version": "0.1.0"
+      },
+      "yum": {
+        "version": "3.10.0"
+      }
+    }
   },
   "run_list": [
-    "recipe[vim-plug]"
+    "recipe[yum-epel]",
+    "recipe[yum-update]",
+    "recipe[mariadb]",
+    "recipe[ruby-env]",
+    "recipe[vim]",
+    "recipe[lua]",
+    "recipe[vim-plugin]"
   ]
 }
