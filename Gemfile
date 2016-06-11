@@ -2,5 +2,5 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'knife-zero'
+gem 'knife-solo'
 gem 'berkshelf'
