@@ -10,7 +10,7 @@ and git needed
 
 # use this if it occurs error while installing vim-plugins. 
 sed -i 's/\r//g' file_name
-sed -i 's/^M//g' file_name
+sed -i 's/^M//g' file_name (write ^M not just typing it but typing CTRL+V then CTRL+M)
 
 This happened to me when I cloned this repo on windows7 env and knifed to centos.
 
